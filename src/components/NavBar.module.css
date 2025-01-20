@@ -1,0 +1,29 @@
+.navbar .h1 {
+    font-weight: 400;
+}
+
+.navbar {
+    background-color: #5a55554a;
+    padding: 1em;
+    border-radius: 0 1px 1px 0;
+    position: sticky;
+    width: 100vw;
+    box-sizing: border-box;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 5px 5px #00000024;
+    z-index: 1;
+}
+
+.navbar .link {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+    transition-duration: 200ms;
+}
+
+.navbar .link:hover {
+    @apply text-indigo-500
+}

@@ -1,0 +1,99 @@
+.questoes {
+    /* background-color: white; */
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    min-height: 90vh;
+    overflow: scroll;
+    top: 0;
+    margin-bottom: 120px;
+}
+
+.questao, .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    align-items: center;
+    text-align: left;
+    gap: 1.25rem;
+}
+
+.header {
+    font-weight: bold;
+    /* margin-left: 8px; */
+}
+
+.questao {
+    /* display: grid; */
+    /* grid-template-areas: 
+        'enunciado lbl_nome_disciplina nome_disciplina'
+        'enunciado lbl_nome_assunto nome_assunto'
+    ; */
+    /* grid-template-columns: 70% auto auto; */
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px ridge #ddd;
+}
+.questao tr th {
+    font-weight: bold;
+}
+
+.questao h2 {
+    width: 100%;
+}
+
+.enunciado {
+    flex-basis: 70%;
+    overflow: hidden;
+}
+
+.disciplina, .assunto {
+    flex-basis: 17.5%;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    background-color: #5e50d7;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: .5em;
+    margin: .5em 0;
+    border-radius: 15px;
+    transition-duration: 200ms;
+    border: 2px solid #5e50d7;
+}
+
+.link:hover {
+    color: inherit;
+    background-color: inherit;
+}
+
+/* .label {
+    font-weight: 600;
+} */
+
+/* .lbl_nome_assunto {
+    grid-area: lbl_nome_assunto;
+}
+
+.lbl_nome_disciplina {
+    grid-area: lbl_nome_disciplina;
+}
+
+.enunciado {
+    grid-area: enunciado;
+}
+
+.nome_disciplina {
+    grid-area: nome_disciplina;
+}
+
+.nome_assunto {
+    grid-area: nome_assunto;
+} */

@@ -1,0 +1,26 @@
+.alternativa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: .5em;
+}
+
+.alternativa * {
+    display: block;
+}
+
+.radio_btn {
+    /* display: block; */
+    height: 1em;
+    margin: 0 .5em;
+}
+
+.alt_text {
+    width: 100%;
+    padding: .5em;
+    box-sizing: border-box;
+    resize: both;
+    overflow: auto;
+    border: .5px solid black;
+}

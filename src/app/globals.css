@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  height: 100%;
+  width: 100vw;
+  /* overflow: hidden; */
+  color: #9ca3af;
+}
+
+@layer components {
+  h1 {
+    @apply text-white text-5xl m-6 text-center;
+  }
+
+  body {
+    @apply bg-slate-950;
+  }
+
+  .btn-primary {
+    @apply w-full bg-violet-700 text-white font-semibold shadow-md hover:bg-violet-900 duration-150 cursor-pointer my-4 py-2 focus:ring-violet-400 focus:ring-opacity-75
+  }
+
+  .radio-btn {
+    @apply appearance-none cursor-pointer w-4 h-4 border-2 border-violet-700 rounded-full mx-2 shrink-0 focus:bg-violet-500 duration-100
+  }
+
+  .right-ans {
+    @apply 
+  }
+
+  .wrong-ans {
+    @apply 
+  }
+
+  .txt-field {
+    @apply bg-[#64748b0f] duration-150 border-transparent border-b-indigo-950 border-2 w-full text-white block p-2 mt-2 hover:border-b-violet-700 focus:border-b-violet-500 outline-none focus:bg-[#64748b26] overflow-x-visible
+  }
+
+
+}
