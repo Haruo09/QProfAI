@@ -35,11 +35,7 @@ export default async function Questoes() {
             </div>
           )} */}
           {(questoes.length > 0) ? (
-<<<<<<< HEAD
             <div id='q-wrapper' className={`${styles.questoes} text-justify`}>
-=======
-            <div className={`${styles.questoes} text-justify`} id='q-wrapper'>
->>>>>>> c322f14 (testes da rota /qform automatizados com cypress)
               <div className={`${styles.header}`}>
                 <div className={`${styles.enunciado} font-semibold min-w-fit`}>Enunciado</div>
                 <div className={`${styles.disciplina} font-semibold min-w-fit`}>Disciplina</div>

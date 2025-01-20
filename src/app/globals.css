@@ -12,13 +12,8 @@ body {
   min-height: 100vh;
   height: 100%;
   width: 100vw;
-<<<<<<< HEAD
   overflow-x: hidden;
   color: #9ca3af;
-=======
-  color: #9ca3af;
-  overflow-x: hidden;
->>>>>>> c322f14 (testes da rota /qform automatizados com cypress)
 }
 
 @layer components {
