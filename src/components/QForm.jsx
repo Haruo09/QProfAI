@@ -92,9 +92,9 @@ export default function QForm({ disciplinas, assuntos }) {
   }
   
   return (
-    <form className="border-b-violet-700 border-b-2 p-4 bg-[#5a555517] w-1/4 overflow-scroll left-1/2" onSubmit={handleSubmit(handleForm)}>
+    <form className="border-b-violet-700 border-b-2 p-4 bg-[#5a555517] min-w-1/4 resize overflow-scroll" onSubmit={handleSubmit(handleForm)}>
       <h1 className='font-semibold'>Question Form</h1>
-      <textarea placeholder='Enunciado' name="enunciado" id="enunciado" className="txt-field mb-4 h-fit" {...register("enunciado")} />
+      <textarea placeholder='Enunciado' name="enunciado" id="txt_enunciado" className="txt-field mb-4 h-fit" {...register("enunciado")} />
 
       <div className={styles.alternativas}>
         <Alternativa letter={"A"} register={register} />
@@ -109,7 +109,7 @@ export default function QForm({ disciplinas, assuntos }) {
           <label htmlFor="disciplinas">Disciplina:</label>
           <select 
             name="disciplina"
-            className={`${styles.select} txt-field mx-0`}
+            className={`select_disciplinas txt-field mx-0`}
             {...register("disciplina")}
             // onChange={(e) => changeAssunto(e.target.value)}
             onChange={(e) => {
@@ -130,7 +130,7 @@ export default function QForm({ disciplinas, assuntos }) {
           <label htmlFor="assuntos">Assunto:</label>
           <select 
             name="assuntos" 
-            className={"block w-full txt-field"}
+            className={"select_assuntos block w-full txt-field"}
             {...register("assunto")}
           >
             <option key={0} value={0}> -- </option>
@@ -149,11 +149,11 @@ export default function QForm({ disciplinas, assuntos }) {
         </div>
       </div>
       {/* <input type="submit" value={isGenerating ? "Submit" : ""} className={`btn-primary`} /> */}
-      <button type="submit" className='btn-primary'>
+      <button type="submit" className='btn-primary' id='btnSubmit'>
         {(isSubmiting) ? (<SpinnerEffect text='Submiting' />) : (<>Submit</>)}
       </button>
 
-        <button type="button" value='Generate'
+        <button type="button" value='Generate' id='btnGenerate'
         className='btn-primary mt-0 bg-transparent border-[.10rem] border-indigo-700 text-indigo-700 hover:text-slate-200 hover:bg-indigo-500'
         // className={`btn-primary border-violet-300 text-violet-300 bg-inherit mt-0  border-[2.5px] hover:bg-violet-300 hover:text-violet-700`}
         onClick={generate}
@@ -168,7 +168,7 @@ export default function QForm({ disciplinas, assuntos }) {
             </>
           )}
         </button>
-      <input type="reset" value="Cancel" className={`btn-primary border-red-800 border-[2.5px] mt-0 bg-inherit text-red-800 hover:bg-red-700 hover:text-white`} 
+      <input id='btnCancel' type="reset" value="Cancel" className={`btn-primary border-red-800 border-[2.5px] mt-0 bg-inherit text-red-800 hover:bg-red-700 hover:text-white`} 
       onClick={() => {
         
         setValue('assunto', 0);

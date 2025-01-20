@@ -35,7 +35,7 @@ export default async function Questoes() {
             </div>
           )} */}
           {(questoes.length > 0) ? (
-            <div className={`${styles.questoes} text-justify`}>
+            <div id='q-wrapper' className={`${styles.questoes} text-justify`}>
               <div className={`${styles.header}`}>
                 <div className={`${styles.enunciado} font-semibold min-w-fit`}>Enunciado</div>
                 <div className={`${styles.disciplina} font-semibold min-w-fit`}>Disciplina</div>
