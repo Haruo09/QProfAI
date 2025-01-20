@@ -12,7 +12,7 @@ body {
   min-height: 100vh;
   height: 100%;
   width: 100vw;
-  /* overflow: hidden; */
+  overflow-x: hidden;
   color: #9ca3af;
 }
 
@@ -31,14 +31,6 @@ body {
 
   .radio-btn {
     @apply appearance-none cursor-pointer w-4 h-4 border-2 border-violet-700 rounded-full mx-2 shrink-0 focus:bg-violet-500 duration-100
-  }
-
-  .right-ans {
-    @apply 
-  }
-
-  .wrong-ans {
-    @apply 
   }
 
   .txt-field {

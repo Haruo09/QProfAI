@@ -7,7 +7,7 @@ export const QFormSchema = z.object({
     alternativaC: z.string().nonempty(),
     alternativaD: z.string().nonempty(),
     alternativaE: z.string().nonempty(),
-    alternativaCerta: z.string().length(1).nonempty({ message: "É necessário marcar a opção correta." }).toUpperCase(),
+    alternativaCerta: z.string().length(1).nonempty().toUpperCase().default("A"),
     disciplina: z.string().nonempty().default('0'),
     assunto: z.string().nonempty().default('0')
 });

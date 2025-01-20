@@ -10,7 +10,7 @@ export default function Alternativa({ register, letter }) {
       <input 
         type="text" 
         name={`alt${letter}_text`} 
-        className={`txt-field ${letter == "A" ? 'border-b-green-950 hover:border-b-green-700 focus:border-b-green-500' : 'border-b-red-950 hover:border-b-red-800 focus:border-b-red-500'}  `} 
+        className={`txt_alternativa${letter.toUpperCase()} txt-field ${letter == "A" ? 'border-b-green-950 hover:border-b-green-700 focus:border-b-green-500' : 'border-b-red-950 hover:border-b-red-800 focus:border-b-red-500'}  `} 
         {...register(`alternativa${letter}`)}
         // value={alt !== undefined ? alt : ''} 
         // onChange={(e) => setAlt(e.target.value)} 
