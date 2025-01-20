@@ -30,7 +30,7 @@ export default async function Home() {
   return (
     <>
       <NavBar />
-      <main className='flex justify-center mt-6 overflow-scroll'>
+      <main className='h-fit'>
         <QForm disciplinas={disciplinas} assuntos={assuntos}/>
       </main>
     </>

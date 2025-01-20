@@ -24,6 +24,8 @@ export default function QForm({ disciplinas, assuntos }) {
   });
 
   async function handleForm(data) {
+    console.log('Submiting...');
+    
     setIsSubmiting(true);
     const dataAfterParse = QFormSchema.safeParse(data);
 
@@ -91,8 +93,13 @@ export default function QForm({ disciplinas, assuntos }) {
     }
   }
   
+  // COMPONENT RETURN ==================================================================================================
   return (
+<<<<<<< HEAD
     <form className="border-b-violet-700 border-b-2 p-4 bg-[#5a555517] min-w-1/4 resize overflow-scroll" onSubmit={handleSubmit(handleForm)}>
+=======
+    <form className="border-b-violet-700 border-b-2 p-4 bg-[#5a555517] min-w-1/4 max-w-[700px] h-fit overflow-y-scroll resize mt-8 mx-auto" onSubmit={handleSubmit(handleForm)}>
+>>>>>>> c322f14 (testes da rota /qform automatizados com cypress)
       <h1 className='font-semibold'>Question Form</h1>
       <textarea placeholder='Enunciado' name="enunciado" id="txt_enunciado" className="txt-field mb-4 h-fit" {...register("enunciado")} />
 
@@ -109,7 +116,11 @@ export default function QForm({ disciplinas, assuntos }) {
           <label htmlFor="disciplinas">Disciplina:</label>
           <select 
             name="disciplina"
+<<<<<<< HEAD
             className={`select_disciplinas txt-field mx-0`}
+=======
+            className={`select_disciplinas ${styles.select} txt-field mx-0`}
+>>>>>>> c322f14 (testes da rota /qform automatizados com cypress)
             {...register("disciplina")}
             // onChange={(e) => changeAssunto(e.target.value)}
             onChange={(e) => {
@@ -149,7 +160,11 @@ export default function QForm({ disciplinas, assuntos }) {
         </div>
       </div>
       {/* <input type="submit" value={isGenerating ? "Submit" : ""} className={`btn-primary`} /> */}
+<<<<<<< HEAD
       <button type="submit" className='btn-primary' id='btnSubmit'>
+=======
+      <button type="submit" className='btn-primary' id='btnSubmit' onClick={() => console.log(errors)}>
+>>>>>>> c322f14 (testes da rota /qform automatizados com cypress)
         {(isSubmiting) ? (<SpinnerEffect text='Submiting' />) : (<>Submit</>)}
       </button>
 
@@ -168,7 +183,11 @@ export default function QForm({ disciplinas, assuntos }) {
             </>
           )}
         </button>
+<<<<<<< HEAD
       <input id='btnCancel' type="reset" value="Cancel" className={`btn-primary border-red-800 border-[2.5px] mt-0 bg-inherit text-red-800 hover:bg-red-700 hover:text-white`} 
+=======
+      <input type="reset" value="Cancel" id='btnCancel' className={`btn-primary border-red-800 border-[2.5px] mt-0 bg-inherit text-red-800 hover:bg-red-700 hover:text-white`} 
+>>>>>>> c322f14 (testes da rota /qform automatizados com cypress)
       onClick={() => {
         
         setValue('assunto', 0);
