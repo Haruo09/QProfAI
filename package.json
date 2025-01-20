@@ -8,10 +8,6 @@
     "start": "next start",
     "lint": "next lint",
     "cy:open": "cypress open"
-<<<<<<< HEAD
-
-=======
->>>>>>> c322f14 (testes da rota /qform automatizados com cypress)
   },
   "dependencies": {
     "@google/generative-ai": "^0.17.1",
