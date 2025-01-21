@@ -1,10 +1,10 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  component: {
+  e2e: {
     devServer: {
       framework: "next",
       bundler: "webpack",
     },
-  },
+  }
 });

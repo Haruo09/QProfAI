@@ -50,11 +50,17 @@ export default async function Questoes() {
                   
                   return (
                     <Link href={`/questoes/ID/${questao.ID}`} className={`${styles.questao} hover:border-b-violet-700 hover:bg-[#64748b26] duration-200 p-2 py-3`} key={questao.ID}>
-                      <div className={`${styles.enunciado} text-justify`}>{(questao.enunciado.length >= 220) ? (questao.enunciado.substring(0, 180) + "...") : (questao.enunciado)}</div>
-                      <div className={`${styles.disciplina} text-justify`}>{disciplinas[questao.id_disciplina]}</div>
-                      <div className={`${styles.assunto} text-justify`}>{assunto["nome_assunto"]}</div>
+                      <div className={`${styles.enunciado} text-justify line-clamp-2`}>
+                        {questao.enunciado}
+                      </div>
+                      <div className={`${styles.disciplina} text-justify`}>
+                        {disciplinas[questao.id_disciplina]}
+                      </div>
+                      <div className={`${styles.assunto} text-justify`}>
+                        {assunto["nome_assunto"]}
+                      </div>
                     </Link>
-                  )
+                  );
                 })
               }
             </div>
