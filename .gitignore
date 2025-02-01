@@ -169,5 +169,3 @@ next-env.d.ts
 
 # my ignores
 src/app/test
-src/database/*.sql
->>>>>>> aae1f00 (Formulário com GEMINI e armazenamento de questões implementados)
